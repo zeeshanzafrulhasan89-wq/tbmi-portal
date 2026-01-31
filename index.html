@@ -5,289 +5,347 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Technical and Business Management Institute</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Roboto',sans-serif;
+  font-family:'Poppins',sans-serif;
 }
 body{
-  line-height:1.6;
+  background:#f4f6f9;
   color:#333;
+  line-height:1.7;
 }
 a{text-decoration:none;}
 img{max-width:100%;}
 
-/* ================= HEADER ================= */
-.main-header{
-  background:#003366;
-  color:#fff;
-  padding:10px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+/* ===== HEADER ===== */
+header{
+  background:#002147;
   position:sticky;
   top:0;
   z-index:1000;
 }
-
-.header-left{
+.navbar{
+  max-width:1250px;
+  margin:auto;
+  padding:12px 20px;
   display:flex;
+  justify-content:space-between;
   align-items:center;
 }
-
-.college-logo{
+.logo{
+  display:flex;
+  align-items:center;
+  color:#fff;
+}
+.logo img{
   width:55px;
-  height:55px;
   margin-right:12px;
 }
-
-.college-text h1{
+.logo h1{
   font-size:20px;
-  margin:0;
 }
-.college-text p{
-  font-size:13px;
+.logo span{
+  font-size:12px;
   color:#ffcc00;
 }
 
-/* MENU */
-.nav-menu ul{
+nav ul{
   list-style:none;
   display:flex;
-  gap:15px;
+  gap:20px;
 }
-.nav-menu ul li a{
-  color:white;
-  padding:8px 12px;
-  font-weight:500;
+nav ul li a{
+  color:#fff;
+  font-size:15px;
+  padding:6px 10px;
 }
-.nav-menu ul li a:hover{
-  background:#0055aa;
-  border-radius:5px;
+nav ul li a:hover{
+  background:#003366;
+  border-radius:4px;
 }
 
-/* HAMBURGER */
-.hamburger{
+/* Mobile Menu */
+.menu-btn{
   display:none;
   flex-direction:column;
   cursor:pointer;
 }
-.hamburger span{
+.menu-btn span{
   width:25px;
   height:3px;
-  background:white;
+  background:#fff;
   margin:4px 0;
 }
 
-/* ================= BANNER ================= */
-.banner{
-  height:450px;
-  background:url('https://cdn.pixabay.com/photo/2017/08/03/11/50/campus-2582072_1280.jpg') center/cover no-repeat;
+/* ===== HERO ===== */
+.hero{
+  height:480px;
+  background:
+  linear-gradient(rgba(0,33,71,0.75),rgba(0,33,71,0.75)),
+  url('https://cdn.pixabay.com/photo/2017/08/03/11/50/campus-2582072_1280.jpg')
+  center/cover no-repeat;
   display:flex;
-  justify-content:center;
   align-items:center;
-  position:relative;
-}
-.banner::before{
-  content:"";
-  position:absolute;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,0.5);
-}
-.banner-content{
-  position:relative;
-  color:white;
+  justify-content:center;
   text-align:center;
-  max-width:90%;
+  color:#fff;
 }
-.banner-content h2{
-  font-size:2.5em;
-  margin-bottom:15px;
+.hero h2{
+  font-size:42px;
 }
-.btn{
+.hero p{
+  font-size:18px;
+  margin:15px 0 25px;
+}
+.hero a{
   background:#ffcc00;
-  color:#003366;
-  padding:12px 25px;
-  border-radius:5px;
-  font-weight:bold;
+  color:#002147;
+  padding:14px 32px;
+  border-radius:4px;
+  font-weight:600;
 }
-.btn:hover{background:#ffc107;}
 
-/* ================= NOTICE ================= */
+/* ===== NOTICE ===== */
 .notice{
-  background:#f1f1f1;
+  background:#ffcc00;
   padding:10px;
   overflow:hidden;
 }
 .notice p{
   white-space:nowrap;
-  animation:scroll 15s linear infinite;
-  font-weight:bold;
-  color:#003366;
+  animation:scroll 18s linear infinite;
+  font-weight:600;
 }
 @keyframes scroll{
   from{transform:translateX(100%);}
   to{transform:translateX(-100%);}
 }
 
-/* ================= SECTIONS ================= */
+/* ===== SECTION ===== */
 section{
-  padding:60px 20px;
   max-width:1200px;
   margin:auto;
+  padding:70px 20px;
 }
 .section-title{
   text-align:center;
-  font-size:2em;
-  color:#003366;
-  margin-bottom:30px;
+  font-size:32px;
+  color:#002147;
+  margin-bottom:40px;
 }
 
-/* ADMIN & FACULTY */
-.card{
-  background:#f5f5f5;
-  padding:20px;
-  border-radius:10px;
-  margin-bottom:20px;
-  display:flex;
-  align-items:center;
-  gap:20px;
+/* ABOUT */
+.about{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  font-size:16px;
 }
-.card img{
-  width:160px;
-  height:160px;
+
+/* VISION MISSION */
+.vm{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.vm div{
+  background:#fff;
+  padding:30px;
+  border-radius:8px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ADMIN */
+.admin{
+  display:flex;
+  gap:30px;
+  background:#fff;
+  padding:30px;
+  border-radius:8px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+.admin img{
+  width:180px;
+  height:180px;
   border-radius:50%;
   object-fit:cover;
 }
 
+/* DEPARTMENTS */
+.depts{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+.dept{
+  background:#fff;
+  padding:25px;
+  border-radius:8px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FACULTY */
 .faculty-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
 }
 .faculty{
-  background:#f9f9f9;
-  padding:15px;
-  border-radius:10px;
+  background:#fff;
+  padding:25px;
   text-align:center;
+  border-radius:8px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 .faculty img{
   width:100px;
   height:100px;
   border-radius:50%;
+  margin-bottom:10px;
 }
 
 /* GALLERY */
 .gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
 .gallery img{
-  border-radius:10px;
-  height:150px;
+  height:160px;
   object-fit:cover;
+  border-radius:6px;
 }
 
-/* NEWS */
-.news{
-  display:flex;
-  gap:20px;
-  overflow-x:auto;
-}
-.news-card{
-  min-width:250px;
-  background:#f9f9f9;
-  padding:15px;
-  border-radius:10px;
+/* CONTACT */
+.contact{
+  background:#002147;
+  color:#fff;
+  border-radius:8px;
+  padding:40px;
+  text-align:center;
 }
 
 /* FOOTER */
 footer{
-  background:#003366;
-  color:white;
+  background:#00152f;
+  color:#ccc;
   text-align:center;
-  padding:20px;
+  padding:18px;
+  font-size:14px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 @media(max-width:768px){
-  .nav-menu ul{display:none;flex-direction:column;}
-  .nav-menu.active ul{display:flex;}
-  .hamburger{display:flex;}
-  .card{flex-direction:column;text-align:center;}
-  .banner-content h2{font-size:1.7em;}
-  .college-text h1{font-size:16px;}
+  nav ul{
+    display:none;
+    flex-direction:column;
+    background:#002147;
+    position:absolute;
+    top:70px;
+    right:20px;
+    padding:15px;
+  }
+  nav.active ul{display:flex;}
+  .menu-btn{display:flex;}
+  .hero h2{font-size:28px;}
+  .admin{flex-direction:column;text-align:center;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="main-header">
-  <div class="header-left">
-    <img src="logo.png" class="college-logo" alt="TBMI Logo">
-    <div class="college-text">
-      <h1>Technical and Business Management Institute</h1>
-      <p>Shaping Future Leaders</p>
+<header>
+  <div class="navbar">
+    <div class="logo">
+      <img src="https://i.postimg.cc/JnVk5zcM/Gemini-Generated-Image-e5f7mxe5f7mxe5f7.png">
+      <div>
+        <h1>Technical and Business Management Institute</h1>
+        <span>Shaping Future Leaders</span>
+      </div>
     </div>
-  </div>
 
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </div>
+    <div class="menu-btn" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
 
-  <nav class="nav-menu">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#admin">Administration</a></li>
-      <li><a href="#academic">Academic</a></li>
-      <li><a href="#admission">Admission</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <nav id="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#admin">Administration</a></li>
+        <li><a href="#academic">Academic</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<!-- BANNER -->
-<div class="banner">
-  <div class="banner-content">
-    <h2>Welcome to Technical and Business Management Institute</h2>
-    <a href="#" class="btn">Apply Now</a>
+<div class="hero">
+  <div>
+    <h2>Welcome to TBMI</h2>
+    <p>Quality Education for a Better Tomorrow</p>
+    <a href="#">Apply for Admission</a>
   </div>
 </div>
 
-<!-- NOTICE -->
 <div class="notice">
-  <p>Semester Exam Schedule 2026 | Public Holiday Announcement | Admission Result 2026</p>
+  <p>📢 Admission Open 2026 | Semester Exam Routine Published | Academic Session Ongoing</p>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
-  <h2 class="section-title">About Us</h2>
-  <p>Founded in 2004, Technical and Business Management Institute provides quality education in technology and business studies.</p>
+  <h2 class="section-title">About Our Institute</h2>
+  <p class="about">
+    Established in 2004, Technical and Business Management Institute is committed to
+    providing quality education with discipline, ethics and modern learning facilities.
+  </p>
 </section>
 
-<!-- ADMIN -->
-<section id="admin">
-  <h2 class="section-title">Administration</h2>
-  <div class="card">
-    <img src="https://images.pexels.com/photos/3775536/pexels-photo-3775536.jpeg">
+<section>
+  <h2 class="section-title">Vision & Mission</h2>
+  <div class="vm">
     <div>
-      <h3>MD Ahsan Habib – Principal</h3>
-      <p>We are committed to academic excellence and leadership.</p>
+      <h3>Our Vision</h3>
+      <p>To become a leading educational institution producing skilled professionals.</p>
+    </div>
+    <div>
+      <h3>Our Mission</h3>
+      <p>To deliver quality education through experienced faculty and modern technology.</p>
     </div>
   </div>
 </section>
 
-<!-- FACULTY -->
+<section id="admin">
+  <h2 class="section-title">Administration</h2>
+  <div class="admin">
+    <img src="https://images.pexels.com/photos/3775536/pexels-photo-3775536.jpeg">
+    <div>
+      <h3>MD Ahsan Habib</h3>
+      <p><strong>Principal</strong></p>
+      <p>
+        We are dedicated to nurturing skilled, disciplined and confident graduates.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="academic">
+  <h2 class="section-title">Departments</h2>
+  <div class="depts">
+    <div class="dept">Computer Technology</div>
+    <div class="dept">Business Management</div>
+    <div class="dept">Electrical Technology</div>
+    <div class="dept">General Education</div>
+  </div>
+</section>
+
 <section>
   <h2 class="section-title">Faculty Members</h2>
   <div class="faculty-grid">
@@ -302,9 +360,8 @@ footer{
   </div>
 </section>
 
-<!-- GALLERY -->
 <section id="gallery">
-  <h2 class="section-title">Gallery</h2>
+  <h2 class="section-title">Campus Gallery</h2>
   <div class="gallery">
     <img src="https://cdn.pixabay.com/photo/2017/08/03/04/36/school-2581317_1280.jpg">
     <img src="https://images.pexels.com/photos/3059657/pexels-photo-3059657.jpeg">
@@ -312,24 +369,24 @@ footer{
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-  <h2 class="section-title">Contact</h2>
-  <p>📍 Bhawlagonj, Debiganj, Panchagarh</p>
-  <p>📞 01717205546</p>
-  <p>✉ tbmi132253@gmail.com</p>
+  <div class="contact">
+    <h2>Contact Information</h2>
+    <p>📍 Bhawlagonj, Debiganj, Panchagarh</p>
+    <p>📞 01717205546</p>
+    <p>✉ tbmi132253@gmail.com</p>
+  </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 Technical and Business Management Institute</p>
+  © 2026 Technical and Business Management Institute | All Rights Reserved
 </footer>
 
 <script>
 function toggleMenu(){
-  document.querySelector('.nav-menu').classList.toggle('active');
+  document.getElementById("nav").classList.toggle("active");
 }
 </script>
 
 </body>
-                                     </html>
+  </html>
