@@ -1,260 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Technical and Business Management Institute</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-body{
-  background:#f4f6f9;
-  color:#333;
-  line-height:1.7;
-}
-a{text-decoration:none;}
-img{max-width:100%;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f4f6f9;color:#333}
+a{text-decoration:none}
 
 /* ===== HEADER ===== */
-header{
-  background:#002147;
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
+header{background:#002147;position:sticky;top:0;z-index:1000}
 .navbar{
-  max-width:1250px;
-  margin:auto;
-  padding:12px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.logo{
-  display:flex;
-  align-items:center;
-  color:#fff;
-}
-.logo img{
-  width:55px;
-  margin-right:12px;
-}
-.logo h1{
-  font-size:20px;
-}
-.logo span{
-  font-size:12px;
-  color:#ffcc00;
+max-width:1250px;
+margin:auto;
+padding:12px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:relative;
 }
 
-nav ul{
-  list-style:none;
-  display:flex;
-  gap:20px;
-}
-nav ul li a{
-  color:#fff;
-  font-size:15px;
-  padding:6px 10px;
-}
-nav ul li a:hover{
-  background:#003366;
-  border-radius:4px;
-}
+.logo{display:flex;align-items:center;color:#fff}
+.logo img{width:55px;margin-right:12px}
+.logo h1{font-size:20px}
+.logo span{font-size:12px;color:#ffcc00}
 
-/* Mobile Menu */
+nav ul{list-style:none;display:flex;gap:18px}
+nav ul li a{color:#fff;padding:6px 10px}
+nav ul li a:hover{background:#003366;border-radius:4px}
+
+/* ===== HAMBURGER ===== */
 .menu-btn{
-  display:none;
-  flex-direction:column;
-  cursor:pointer;
+display:none;
+flex-direction:column;
+cursor:pointer;
+z-index:2001;
 }
 .menu-btn span{
-  width:25px;
-  height:3px;
-  background:#fff;
-  margin:4px 0;
+width:25px;
+height:3px;
+background:#fff;
+margin:4px 0;
 }
 
 /* ===== HERO ===== */
 .hero{
-  height:480px;
-  background:
-  linear-gradient(rgba(0,33,71,0.75),rgba(0,33,71,0.75)),
-  url('https://cdn.pixabay.com/photo/2017/08/03/11/50/campus-2582072_1280.jpg')
-  center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
+height:450px;
+background:
+linear-gradient(rgba(0,33,71,.75),rgba(0,33,71,.75)),
+url('https://cdn.pixabay.com/photo/2017/08/03/11/50/campus-2582072_1280.jpg') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff
 }
-.hero h2{
-  font-size:42px;
-}
-.hero p{
-  font-size:18px;
-  margin:15px 0 25px;
-}
+.hero h2{font-size:40px}
+.hero p{margin:15px 0}
 .hero a{
-  background:#ffcc00;
-  color:#002147;
-  padding:14px 32px;
-  border-radius:4px;
-  font-weight:600;
+background:#ffcc00;
+color:#002147;
+padding:14px 30px;
+border-radius:4px;
+font-weight:600
 }
 
 /* ===== NOTICE ===== */
-.notice{
-  background:#ffcc00;
-  padding:10px;
-  overflow:hidden;
-}
-.notice p{
-  white-space:nowrap;
-  animation:scroll 18s linear infinite;
-  font-weight:600;
-}
-@keyframes scroll{
-  from{transform:translateX(100%);}
-  to{transform:translateX(-100%);}
-}
+.notice{background:#ffcc00;padding:10px;overflow:hidden;text-align:center;font-weight:600;}
+.notice p{white-space:nowrap;animation:scroll 18s linear infinite;}
+@keyframes scroll{from{transform:translateX(100%);}to{transform:translateX(-100%);}}
 
-/* ===== SECTION ===== */
-section{
-  max-width:1200px;
-  margin:auto;
-  padding:70px 20px;
-}
-.section-title{
-  text-align:center;
-  font-size:32px;
-  color:#002147;
-  margin-bottom:40px;
-}
+/* ===== SECTIONS ===== */
+section{max-width:1200px;margin:auto;padding:70px 20px}
+.section-title{text-align:center;font-size:32px;color:#002147;margin-bottom:40px}
+.about{text-align:center;max-width:900px;margin:auto}
 
-/* ABOUT */
-.about{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-  font-size:16px;
-}
+.depts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+.dept{background:#fff;padding:25px;border-radius:8px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.1)}
 
-/* VISION MISSION */
-.vm{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
-.vm div{
-  background:#fff;
-  padding:30px;
-  border-radius:8px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
+/* ===== PRINCIPAL ===== */
+.admin{display:flex;gap:30px;background:#fff;padding:30px;border-radius:8px;box-shadow:0 5px 20px rgba(0,0,0,.1);margin-bottom:50px}
+.admin img{width:180px;height:180px;border-radius:50%;object-fit:cover}
+.admin div{flex:1;display:flex;flex-direction:column;justify-content:center}
 
-/* ADMIN */
-.admin{
-  display:flex;
-  gap:30px;
-  background:#fff;
-  padding:30px;
-  border-radius:8px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
-.admin img{
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  object-fit:cover;
-}
+/* ===== ADMISSION FORM ===== */
+.form-box{max-width:650px;margin:auto;background:#fff;padding:35px;border-radius:8px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.form-box a{display:block;text-align:center;background:#002147;color:#fff;padding:12px;border-radius:5px;font-weight:bold;margin-top:10px}
 
-/* DEPARTMENTS */
-.depts{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-}
-.dept{
-  background:#fff;
-  padding:25px;
-  border-radius:8px;
-  text-align:center;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
+/* ===== GALLERY ===== */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin-top:20px;}
+.gallery img{border-radius:10px;height:150px;object-fit:cover;}
 
-/* FACULTY */
-.faculty-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-}
-.faculty{
-  background:#fff;
-  padding:25px;
-  text-align:center;
-  border-radius:8px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-.faculty img{
-  width:100px;
-  height:100px;
-  border-radius:50%;
-  margin-bottom:10px;
-}
+/* ===== FLOATING BUTTONS ===== */
+.float-btn{position:fixed;right:20px;z-index:3000;display:flex;flex-direction:column;gap:12px;bottom:20px;}
+.float-btn a{width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;box-shadow:0 5px 15px rgba(0,0,0,.3)}
+.whatsapp{background:#25D366}
+.call{background:#0b5ed7}
 
-/* GALLERY */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
-.gallery img{
-  height:160px;
-  object-fit:cover;
-  border-radius:6px;
-}
+/* ===== FOOTER ===== */
+footer{background:#00152f;color:#ccc;text-align:center;padding:18px}
 
-/* CONTACT */
-.contact{
-  background:#002147;
-  color:#fff;
-  border-radius:8px;
-  padding:40px;
-  text-align:center;
-}
-
-/* FOOTER */
-footer{
-  background:#00152f;
-  color:#ccc;
-  text-align:center;
-  padding:18px;
-  font-size:14px;
-}
-
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media(max-width:768px){
-  nav ul{
-    display:none;
-    flex-direction:column;
-    background:#002147;
-    position:absolute;
-    top:70px;
-    right:20px;
-    padding:15px;
-  }
-  nav.active ul{display:flex;}
-  .menu-btn{display:flex;}
-  .hero h2{font-size:28px;}
-  .admin{flex-direction:column;text-align:center;}
+nav ul{display:none;flex-direction:column;background:#002147;position:fixed;top:70px;right:0;width:100%;padding:20px;z-index:1500;}
+nav.active ul{display:flex}
+.menu-btn{display:flex}
+.hero h2{font-size:28px}
+.admin{flex-direction:column;text-align:center}
 }
 </style>
 </head>
@@ -262,130 +119,102 @@ footer{
 <body>
 
 <header>
-  <div class="navbar">
-    <div class="logo">
-      <img src="https://i.postimg.cc/JnVk5zcM/Gemini-Generated-Image-e5f7mxe5f7mxe5f7.png">
-      <div>
-        <h1>Technical and Business Management Institute</h1>
-        <span>Shaping Future Leaders</span>
-      </div>
-    </div>
+<div class="navbar">
+<div class="logo">
+<img src="https://i.postimg.cc/JnVk5zcM/Gemini-Generated-Image-e5f7mxe5f7mxe5f7.png">
+<div><h1>TBMI</h1><span>Shaping Future Leaders</span></div>
+</div>
 
-    <div class="menu-btn" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </div>
+<div class="menu-btn" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 
-    <nav id="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#admin">Administration</a></li>
-        <li><a href="#academic">Academic</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+<nav id="nav">
+<ul>
+<li><a href="#">হোম / Home</a></li>
+<li><a href="#about">আমাদের সম্পর্কে / About</a></li>
+<li><a href="#academic">ডিপার্টমেন্ট / Departments</a></li>
+<li><a href="#admission">ভর্তি / Admission</a></li>
+<li><a href="#contact">যোগাযোগ / Contact</a></li>
+</ul>
+</nav>
+</div>
 </header>
 
 <div class="hero">
-  <div>
-    <h2>Welcome to TBMI</h2>
-    <p>Quality Education for a Better Tomorrow</p>
-    <a href="#">Apply for Admission</a>
-  </div>
+<div>
+<h2>স্বাগতম TBMI তে / Welcome to TBMI</h2>
+<p>মানসম্মত শিক্ষা প্রতিটি জন্য / Quality Education for All</p>
+<a href="#admission">Apply Online / ভর্তি করুন</a>
+</div>
 </div>
 
 <div class="notice">
-  <p>📢 Admission Open 2026 | Semester Exam Routine Published | Academic Session Ongoing</p>
+<p>📢 ভর্তি চলছে / Admission Open 2025-2026</p>
 </div>
 
 <section id="about">
-  <h2 class="section-title">About Our Institute</h2>
-  <p class="about">
-    Established in 2004, Technical and Business Management Institute is committed to
-    providing quality education with discipline, ethics and modern learning facilities.
-  </p>
-</section>
-
-<section>
-  <h2 class="section-title">Vision & Mission</h2>
-  <div class="vm">
-    <div>
-      <h3>Our Vision</h3>
-      <p>To become a leading educational institution producing skilled professionals.</p>
-    </div>
-    <div>
-      <h3>Our Mission</h3>
-      <p>To deliver quality education through experienced faculty and modern technology.</p>
-    </div>
-  </div>
-</section>
-
-<section id="admin">
-  <h2 class="section-title">Administration</h2>
-  <div class="admin">
-    <img src="https://images.pexels.com/photos/3775536/pexels-photo-3775536.jpeg">
-    <div>
-      <h3>MD Ahsan Habib</h3>
-      <p><strong>Principal</strong></p>
-      <p>
-        We are dedicated to nurturing skilled, disciplined and confident graduates.
-      </p>
-    </div>
-  </div>
+<h2 class="section-title">আমাদের সম্পর্কে / About</h2>
+<p class="about">Technical and Business Management Institute (TBMI), 2004 সালে প্রতিষ্ঠিত, মানসম্মত শিক্ষা এবং দক্ষতা বিকাশে প্রতিশ্রুতিবদ্ধ।</p>
 </section>
 
 <section id="academic">
-  <h2 class="section-title">Departments</h2>
-  <div class="depts">
-    <div class="dept">Computer Technology</div>
-    <div class="dept">Business Management</div>
-    <div class="dept">Electrical Technology</div>
-    <div class="dept">General Education</div>
-  </div>
+<h2 class="section-title">ডিপার্টমেন্ট / Departments</h2>
+<div class="depts">
+<div class="dept">Humanities</div>
+<div class="dept">Digital Technology</div>
+</div>
 </section>
 
-<section>
-  <h2 class="section-title">Faculty Members</h2>
-  <div class="faculty-grid">
-    <div class="faculty">
-      <img src="https://images.pexels.com/photos/3183182/pexels-photo-3183182.jpeg">
-      <p><strong>Dr. Nazmul Haque</strong><br>Computer Science</p>
-    </div>
-    <div class="faculty">
-      <img src="https://cdn.pixabay.com/photo/2017/01/10/19/05/teacher-1979268_1280.jpg">
-      <p><strong>Ms. Rina Sultana</strong><br>English</p>
-    </div>
-  </div>
+<section id="admin">
+<h2 class="section-title">Principal</h2>
+<div class="admin">
+<img src="https://i.postimg.cc/597Q0gYy/Gemini-Generated-Image-5c9sz35c9sz35c9s-(1)-Picsart-Ai-Image-Enhancer.png" alt="Principal">
+<div><h3>MD Ahsan Habib</h3><p>Education for All</p></div>
+</div>
+</section>
+
+<section id="admission">
+<h2 class="section-title">Online Admission Form / ভর্তি ফর্ম</h2>
+<div class="form-box">
+<p style="text-align:center;font-weight:600;margin-bottom:15px">Admission Year: 2025-2026 | Fee: 2500 BDT</p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdjWRmf-FIpUS6n42bTq691LTgffG39FhJ8_zekZasnGe8-Hg/viewform" target="_blank">
+Click Here to Apply / ভর্তি করতে এখানে ক্লিক করুন
+</a>
+</div>
 </section>
 
 <section id="gallery">
-  <h2 class="section-title">Campus Gallery</h2>
-  <div class="gallery">
-    <img src="https://cdn.pixabay.com/photo/2017/08/03/04/36/school-2581317_1280.jpg">
-    <img src="https://images.pexels.com/photos/3059657/pexels-photo-3059657.jpeg">
-    <img src="https://images.pexels.com/photos/4144229/pexels-photo-4144229.jpeg">
-  </div>
+<h2 class="section-title">Gallery</h2>
+<div class="gallery">
+<img src="https://cdn.pixabay.com/photo/2017/08/03/04/36/school-2581317_1280.jpg">
+<img src="https://images.pexels.com/photos/3059657/pexels-photo-3059657.jpeg">
+<img src="https://images.pexels.com/photos/4144229/pexels-photo-4144229.jpeg">
+</div>
 </section>
 
 <section id="contact">
-  <div class="contact">
-    <h2>Contact Information</h2>
-    <p>📍 Bhawlagonj, Debiganj, Panchagarh</p>
-    <p>📞 01717205546</p>
-    <p>✉ tbmi132253@gmail.com</p>
-  </div>
+<div class="form-box">
+<p>📍 Address: Bhawlagonj, Debiganj, Panchagarh</p>
+<p>📞 Phone: 01717205546</p>
+<p>✉ Email: tbmi132253@gmail.com</p>
+</div>
 </section>
 
 <footer>
-  © 2026 Technical and Business Management Institute | All Rights Reserved
+© 2026 Technical and Business Management Institute
 </footer>
 
+<!-- Floating Buttons -->
+<div class="float-btn">
+<a class="whatsapp" href="https://wa.me/8801717205546" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+<a class="call" href="tel:01717205546">
+<i class="fas fa-phone"></i>
+</a>
+</div>
+
 <script>
-function toggleMenu(){
-  document.getElementById("nav").classList.toggle("active");
-}
+function toggleMenu(){document.getElementById("nav").classList.toggle("active");}
 </script>
 
 </body>
