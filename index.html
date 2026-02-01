@@ -11,13 +11,19 @@
 <style>
 /* BASE STYLES */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;transition:all .3s;}
-body{scroll-behavior:smooth;background:#f4f6f9;color:#333;}
+body{scroll-behavior:smooth;color:#333;background:#f4f6f9;}
 a{text-decoration:none;}
 img{max-width:100%;display:block;}
+.dark-mode{background:#111;color:#f0f0f0;}
+.dark-mode header{background:#001f3f;}
+.dark-mode .hero{background:linear-gradient(-45deg,#001f3f,#002147,#003366,#001f3f);}
+.dark-mode .notice{background:#444;color:#ffcc00;}
+.dark-mode .dept,.dark-mode .faculty,.dark-mode .admin,.dark-mode .form-box,.dark-mode .counter{background:#222;color:#fff;}
+.dark-mode footer{background:#000;color:#ccc;}
 
 /* HEADER */
-header{position:sticky;top:0;z-index:1000;transition:.3s;}
-.navbar{max-width:1250px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;background:#003366;border-bottom:3px solid #ffcc00;box-shadow:0 3px 10px rgba(0,0,0,.2);}
+header{position:sticky;top:0;z-index:1000;background:#003366;box-shadow:0 3px 10px rgba(0,0,0,.2);}
+.navbar{max-width:1250px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;}
 .logo{display:flex;align-items:center;color:#fff;}
 .logo img{width:65px;margin-right:12px;}
 .logo h1{font-size:22px;font-weight:700;color:#fff;}
@@ -50,7 +56,6 @@ animation:gradientBG 15s ease infinite;}
 /* NOTICE */
 .notice{background:#ffcc00;padding:12px;text-align:center;font-weight:600;font-size:16px;overflow:hidden;}
 .notice p{white-space:nowrap;animation:scroll 22s linear infinite;}
-@keyframes scroll{from{transform:translateX(100%);}to{transform:translateX(-100%);}}
 
 /* SECTIONS */
 section{max-width:1200px;margin:auto;padding:80px 20px;}
@@ -129,8 +134,9 @@ nav.active ul{display:flex}
 }
 </style>
 </head>
-<body>
 
+<body>
+<!-- HEADER -->
 <header>
 <div class="navbar">
 <div class="logo">
@@ -157,7 +163,7 @@ nav.active ul{display:flex}
 </div>
 </header>
 
-<!-- Hero -->
+<!-- HERO -->
 <div class="hero">
 <div class="particles">
 <div style="top:10%;left:20%;animation-duration:22s;"></div>
@@ -177,12 +183,13 @@ nav.active ul{display:flex}
 <p>📢 Admission Open 2025-2026 | Semester Exam Schedule | Holiday Announcement</p>
 </div>
 
-<!-- Sections -->
+<!-- ABOUT -->
 <section id="about">
 <h2 class="section-title">About Us</h2>
 <p class="about">Technical and Business Management Institute (TBMI), established in 2004, EIIN: 132253, is committed to providing quality education and skill development in Humanities and Digital Technology.</p>
 </section>
 
+<!-- DEPARTMENTS -->
 <section id="academic">
 <h2 class="section-title">Departments</h2>
 <div class="depts">
@@ -191,6 +198,7 @@ nav.active ul{display:flex}
 </div>
 </section>
 
+<!-- ADMINISTRATION -->
 <section id="admin">
 <h2 class="section-title">Administration</h2>
 <div class="admins">
@@ -201,15 +209,10 @@ nav.active ul{display:flex}
 <p>Education for All</p>
 </div>
 </div>
-<div class="admin">
-<img src="https://via.placeholder.com/150" alt="Vice Principal">
-<div>
-<h3>Vice Principal Name</h3>
-<p>Supporting Academic Excellence</p>
 </div>
-</div>
-</div>
+</section>
 
+<!-- FACULTY -->
 <section id="faculty">
 <h2 class="section-title">Faculty Members</h2>
 <div class="faculty-grid">
@@ -224,6 +227,7 @@ nav.active ul{display:flex}
 </div>
 </section>
 
+<!-- COUNTERS -->
 <section id="counters">
 <h2 class="section-title">College Stats</h2>
 <div class="counters">
@@ -234,22 +238,25 @@ nav.active ul{display:flex}
 </div>
 </section>
 
+<!-- ADMISSION -->
 <section id="admission">
 <h2 class="section-title">Admission Form</h2>
 <div class="form-box">
 <p style="text-align:center;font-weight:600;margin-bottom:15px">Admission Year: 2025-2026 | Fee: 2500 BDT</p>
-<a href="#" onclick="openModal()">Click Here to Apply</a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdjWRmf-FIpUS6n42bTq691LTgffG39FhJ8_zekZasnGe8-Hg/viewform" target="_blank">Click Here to Apply</a>
 </div>
 </section>
 
+<!-- GALLERY -->
 <section id="gallery">
 <h2 class="section-title">Gallery</h2>
 <div class="gallery">
-<img src="https://cdn.pixabay.com/photo/2017/08/03/04/36/school-2581317_1280.jpg" onclick="openLightbox(this)">
-<img src="https://images.pexels.com/photos/3059657/pexels-photo-3059657.jpeg" onclick="openLightbox(this)">
+<img src="https://cdn.pixabay.com/photo/2017/08/03/04/36/school-2581317_1280.jpg">
+<img src="https://images.pexels.com/photos/3059657/pexels-photo-3059657.jpeg">
 </div>
 </section>
 
+<!-- TESTIMONIALS -->
 <section id="testimonials">
 <h2 class="section-title">Testimonials</h2>
 <div class="testimonials-slider">
@@ -259,6 +266,7 @@ nav.active ul{display:flex}
 </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <div class="form-box">
 <p>📍 Address: Bhawlagonj, Debiganj, Panchagarh</p>
@@ -268,6 +276,7 @@ nav.active ul{display:flex}
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
 <p>© 2026 Technical and Business Management Institute</p>
 <div>
@@ -277,15 +286,7 @@ nav.active ul{display:flex}
 </div>
 </footer>
 
+<!-- FLOAT BUTTONS -->
 <div class="float-btn">
 <a class="whatsapp" href="https://wa.me/8801717205546" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<a class="call" href="tel:01717205546"><i class="fas fa-phone"></i></a>
-</div>
-
-<!-- Modal -->
-<div id="admissionModal" class="modal">
-<div class="modal-content">
-<span class="close-modal" onclick="closeModal()">&times;</span>
-<h3>Admission Form 2025-2026</h3>
-<p style="margin-bottom:15px;">Fill the form to apply online:</p>
-<a
+<a class="call" href="tel
